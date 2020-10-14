@@ -1,0 +1,21 @@
+$body-background-color: #111;
+$body-color: #fff;
+
+@import "bulma/bulma";
+
+.landing-title {
+  color: #fff !important;
+  h1 {
+    font-size: 10rem;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 0 !important;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #fff;
+  }
+}
