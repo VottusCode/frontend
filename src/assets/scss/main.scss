@@ -1,6 +1,11 @@
 $body-background-color: #111;
 $body-color: #fff;
 
+$primary: rgb(120, 0, 206);
+
+$card-background-color: #111;
+$card-color: #fff;
+
 @import "bulma/bulma";
 
 .landing-title {
@@ -10,12 +15,81 @@ $body-color: #fff;
     color: #fff;
     line-height: 1;
     margin-bottom: 0;
+
+    &.half {
+      font-size: 6rem !important;
+    }
   }
 
   h2 {
     margin-top: 0 !important;
     font-weight: 100;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
+  }
+}
+
+.console {
+  height: 350px;
+  width: 600px;
+  border-radius: 0.42rem;
+  background: #222;
+
+  & > .bars-wrapper {
+    height: 2.4rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 0.42rem;
+    border-top-right-radius: 0.42rem;
+    text-align: right;
+    display: flex;
+    & > .bars {
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 10px;
+
+      span {
+        background: lightblue;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+
+        &:nth-child(1) {
+          background: lightgreen;
+        }
+
+        &:nth-child(2) {
+          background: orange;
+        }
+
+        &:nth-child(3) {
+          background: lightcoral;
+        }
+      }
+    }
+  }
+  .console-content {
+    padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1rem;
+
+    color: #4af626;
+
+    span {
+      color: white;
+      font-size: 0.875em;
+      margin-left: -4px;
+      padding: 0.25em 0.8em 0.3em;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    div {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
   }
 }

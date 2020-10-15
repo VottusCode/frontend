@@ -4,9 +4,10 @@ import ReactDOM from "react-dom";
 import "./assets/scss/main.scss";
 import Router from "./router";
 
-ReactDOM.render(
+export const ReactRoot: React.FC = () => (
   <React.StrictMode>
     <Router />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
+
+ReactDOM.render(<ReactRoot />, document.getElementById("root"));

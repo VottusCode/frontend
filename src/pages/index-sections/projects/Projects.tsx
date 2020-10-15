@@ -1,0 +1,152 @@
+import React from "react";
+
+import kitsuneWeb from "../../../assets/svg/proj/kitsune-web.png";
+import okeykoWeb from "../../../assets/svg/proj/okeyko-web.png";
+import unknownWeb from "../../../assets/svg/proj/unknown-web.png";
+import Card from "../../../components/elements/Card";
+import Column from "../../../components/flex/Column";
+import { ColumnWrapper } from "../../../components/flex/ColumnWrapper";
+
+export const Projects = () => (
+  <div className="container">
+    <ColumnWrapper>
+      <Column size="is-one-third">
+        <Card
+          title="Kitsune VPN - Website"
+          isParallax={true}
+          image={{ src: kitsuneWeb, alt: "KitsuneVPN" }}
+        >
+          <div className="content">
+            Website Frontend for KitsuneVPN.
+            <br />
+            Live at <a href="https://kitsune.su">kitsune.su</a>
+          </div>
+
+          <div className="tech mt-5">
+            <span className="tag is-success mr-2">Vue.js CSR</span>
+            <span className="tag is-link">TypeScript</span>
+          </div>
+        </Card>
+      </Column>
+
+      <Column size="is-one-third">
+        <Card
+          title="Okeyko"
+          isParallax={true}
+          image={{ src: okeykoWeb, alt: "Okeyko" }}
+        >
+          <div className="content">
+            Website and Backend for Okeyko's Website. Dashboard for OKBOT
+            (Discord Moderation Bot) and currently working with them on some
+            side-projects
+            <br />
+            Live at <a href="https://okeyko.fun">okeyko.fun</a>
+          </div>
+
+          <div className="tech mt-5">
+            <span className="tag is-info mr-2">React CSR</span>
+            <span className="tag is-success mr-2">Vue.js CSR</span>
+            <span className="tag is-link">TypeScript</span>
+          </div>
+        </Card>
+      </Column>
+
+      <Column size="is-one-third">
+        <Card
+          title="Okeyko"
+          isParallax={true}
+          image={{ src: unknownWeb, alt: "Okeyko" }}
+        >
+          <div className="content">Unknown</div>
+
+          <div className="tech mt-5">
+            <span className="tag is-danger">???</span>
+          </div>
+        </Card>
+      </Column>
+    </ColumnWrapper>
+  </div>
+);
+
+// export const ProjectsOld = () => {
+//   return (
+//     <div className="container">
+//       <div className="columns">
+//         <div className="column is-one-third">
+//           <div className="card is-parallax" style={{ height: "500px" }}>
+//             <div className="card-image">
+//               <figure className="image is-16by9">
+//                 <img src={kitsuneWeb} alt="Placeholder image" />
+//               </figure>
+//             </div>
+//             <div className="card-content has-text-centered ">
+//               <div className="mb-5">
+//                 <p className="is-size-4 has-text-weight-medium">
+//                   KitsuneVPN - Website
+//                 </p>
+//               </div>
+
+//               <div className="content">
+//                 Website Frontend for KitsuneVPN.
+//                 <br />
+//                 Live at <a href="https://kitsune.su">kitsune.su</a>
+//               </div>
+
+//               <div className="tech mt-5">
+//                 <span className="tag is-success mr-2">Vue.js CSR</span>
+//                 <span className="tag is-link">TypeScript</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="column is-one-third">
+//           <div className="card is-parallax" style={{ height: "500px" }}>
+//             <div className="card-image">
+//               <figure className="image is-16by9">
+//                 <img src={okeykoWeb} alt="Placeholder image" />
+//               </figure>
+//             </div>
+//             <div className="card-content has-text-centered ">
+//               <div className="mb-5">
+//                 <p className="is-size-4 has-text-weight-medium">Okeyko</p>
+//               </div>
+
+//               <div className="content">
+//                 Website and Backend for Okeyko's Website. Dashboard for OKBOT
+//                 (Discord Moderation Bot) and currently working with them on some
+//                 side-projects
+//                 <br />
+//                 Live at <a href="https://okeyko.fun">okeyko.fun</a>
+//               </div>
+
+//               <div className="tech mt-5">
+//                 <span className="tag is-info mr-2">React CSR</span>
+//                 <span className="tag is-link">TypeScript</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="column is-one-third">
+//           <div className="card is-parallax" style={{ height: "500px" }}>
+//             <div className="card-image">
+//               <figure className="image is-16by9">
+//                 <img src={unknownWeb} alt="Placeholder image" />
+//               </figure>
+//             </div>
+//             <div className="card-content has-text-centered ">
+//               <div className="mb-5">
+//                 <p className="is-size-4 has-text-weight-medium">Unknown</p>
+//               </div>
+
+//               <div className="tech mt-5">
+//                 <span className="tag is-danger">???</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
