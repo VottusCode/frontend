@@ -1,7 +1,7 @@
 import React from "react";
 
 export type CmdResponseBlockProps = {
-  text: string;
+  text: string | React.ReactNode;
 };
 
 export const CmdResponseBlock: React.FC<CmdResponseBlockProps> = ({ text }) => (

@@ -7,6 +7,20 @@ import Card from "../../../components/elements/Card";
 import Column from "../../../components/flex/Column";
 import { ColumnWrapper } from "../../../components/flex/ColumnWrapper";
 
+export const PlaceholderCard = () => (
+  <Card
+    title="Unknown"
+    isParallax={true}
+    image={{ src: unknownWeb, alt: "Unknown" }}
+  >
+    <div className="content">Unknown</div>
+
+    <div className="tech mt-5">
+      <span className="tag is-danger">???</span>
+    </div>
+  </Card>
+);
+
 export const Projects = () => (
   <div className="container">
     <ColumnWrapper>
@@ -52,17 +66,7 @@ export const Projects = () => (
       </Column>
 
       <Column size="is-one-third">
-        <Card
-          title="Okeyko"
-          isParallax={true}
-          image={{ src: unknownWeb, alt: "Okeyko" }}
-        >
-          <div className="content">Unknown</div>
-
-          <div className="tech mt-5">
-            <span className="tag is-danger">???</span>
-          </div>
-        </Card>
+        <PlaceholderCard />
       </Column>
     </ColumnWrapper>
   </div>

@@ -8,6 +8,7 @@ import AboutMe from "./index-sections/AboutConsole";
 import ProjectsTitle from "./index-sections/projects/ProjectsTitle";
 import { Projects } from "./index-sections/projects/Projects";
 import { Title } from "./index-sections/Title";
+import FooterConsole from "../components/layout/FooterConsole";
 
 export const QuestionMark: React.FC<{ width: string; marginLeft: string }> = (
   props
@@ -23,7 +24,7 @@ export const IndexPage: React.FC = () => {
   let parallax = null as Parallax | null;
 
   return (
-    <Parallax ref={(ref) => (parallax = ref)} pages={3}>
+    <Parallax ref={(ref) => (parallax = ref)} pages={3.5}>
       {/* Layer 0 Title - Purple Background */}
       <ParallaxLayer
         offset={0}
@@ -36,7 +37,7 @@ export const IndexPage: React.FC = () => {
       <ParallaxLayer
         offset={0}
         speed={0}
-        factor={3}
+        factor={3.5}
         // @ts-ignore
         style={{
           backgroundImage: `url(${background})`,
@@ -80,7 +81,7 @@ export const IndexPage: React.FC = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
-          marginLeft: "32px",
+          marginLeft: "60px",
         }}
       >
         <Title />
@@ -128,9 +129,31 @@ export const IndexPage: React.FC = () => {
           justifyContent: "center",
         }}
         // @ts-ignore
-        onClick={() => parallax.scrollTo(0)}
+        onClick={() => parallax.scrollTo(2.5)}
       >
         <Projects />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={2.8}
+        speed={0.5}
+        // @ts-ignore
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+        // @ts-ignore
+        onClick={() => parallax.scrollTo(0)}
+      >
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <FooterConsole />
+        </div>
       </ParallaxLayer>
     </Parallax>
   );

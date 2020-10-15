@@ -6,7 +6,7 @@ import { CmdResponseBlock } from "./CmdResponseBlock";
 export type CmdLineProps = {
   host: string;
   cmd: string;
-  response: string;
+  response: string | React.ReactNode;
 };
 
 export const CmdLine: React.FC<CmdLineProps> = ({ host, cmd, response }) => (

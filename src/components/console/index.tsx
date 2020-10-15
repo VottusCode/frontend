@@ -5,7 +5,7 @@ export type ConsoleProps = {
   host: string;
   commands: {
     input: string;
-    response: string;
+    response: string | React.ReactNode;
   }[];
 };
 

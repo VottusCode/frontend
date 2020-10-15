@@ -5,7 +5,7 @@ export const AboutConsole = () => (
   <Console
     host="vottuscode@vottus:/#"
     commands={[
-      { input: "whoami", response: "I am a Website Developer." },
+      { input: "whoami", response: "Website Developer." },
       { input: "whereis me", response: "Prague, Czech Republic" },
       {
         input: "cat languages",

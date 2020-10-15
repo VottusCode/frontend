@@ -11,6 +11,21 @@ $card-color: #fff;
 
 @import "bulma/bulma";
 
+/**
+ * Disable Scrollbar
+ */
+@-moz-document url-prefix() {
+  html {
+    scrollbar-width: none;
+  }
+}
+body {
+  margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
 .landing-title {
   color: #fff !important;
   h1 {
@@ -33,7 +48,7 @@ $card-color: #fff;
 }
 
 .console {
-  height: 350px;
+  height: fit-content;
   width: 600px;
   border-radius: 0.42rem;
   background: #222;
@@ -93,6 +108,134 @@ $card-color: #fff;
       font-size: 0.9rem;
       margin-top: 10px;
       margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 6px;
+      span {
+        display: inline-block;
+        margin-left: 0;
+        width: 90px !important;
+      }
+
+      a {
+        margin-left: 8px;
+        color: #fff;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.vtts-header,
+.is-fade-item {
+  animation: fadeIn 0.4s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+}
+
+.vtts-header {
+  // position: absolute !important;
+  display: flex;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+    background 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+  flex-flow: column;
+  width: 100vw;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  color: #111 !important;
+
+  &.fixed {
+    position: fixed !important;
+  }
+
+  @media (min-width: 768px) {
+    & {
+      padding: 20px 32px 20px 32px;
+    }
+  }
+
+  .header-left {
+    text-align: left;
+    position: absolute;
+
+    & > p,
+    & > a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+  }
+
+  .header-right {
+    text-align: right;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        position: relative;
+        color: #cfcfcf;
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        display: flow-root;
+        margin-right: 0;
+        transition: color 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+
+        @media (min-width: 768px) {
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2.2px;
+            background: #ff9d5a;
+            bottom: 2px;
+            width: 0;
+            transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+          }
+        }
+
+        @media (min-width: 768px) {
+          & {
+            margin-right: 20px !important;
+            display: inline-block !important;
+
+            &:last-child {
+              margin-right: 0 !important;
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+
+        a {
+          color: #cfcfcf;
+          transition: color 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+          &:hover {
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          color: #fff;
+          @media (min-width: 768px) {
+            &:before {
+              width: 100%;
+              transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+          }
+        }
+      }
     }
   }
 }

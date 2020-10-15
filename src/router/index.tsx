@@ -5,10 +5,15 @@ import {
   Route,
   RouteProps,
 } from "react-router-dom";
+import BlogPage from "../pages/blog";
 
 import IndexPage from "../pages/index";
 
 const routes: RouteProps[] = [
+  {
+    path: "/blog",
+    component: BlogPage,
+  },
   {
     path: "/",
     component: IndexPage,
