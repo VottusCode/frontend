@@ -6,7 +6,9 @@ export const Title = () => (
     <h2>Web Developer</h2>
 
     <div className="mt-6">
-      <button className="button is-primary">This is gonna be an arrow</button>
+      <button className="button is-primary is-rounded is-large">
+        Let's go
+      </button>
     </div>
   </div>
 );
