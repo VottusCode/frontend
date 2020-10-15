@@ -2,12 +2,14 @@
 
 $body-family: "Jost", sans-serif;
 $body-background-color: #111;
-$body-color: #fff;
+$body-color: #f0f0f0;
 
 $primary: rgb(120, 0, 206);
+$link: $primary;
+$link-hover: #f0f0f0;
 
 $card-background-color: #111;
-$card-color: #fff;
+$card-color: #f0f0f0;
 
 @import "bulma/bulma";
 

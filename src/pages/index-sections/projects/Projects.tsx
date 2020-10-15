@@ -34,7 +34,12 @@ export const Projects = () => (
           <div className="content">
             Website Frontend for KitsuneVPN.
             <br />
-            Live at <a href="https://kitsune.su">kitsune.su</a>
+            <a
+              href="https://kitsune.su"
+              className="button is-primary is-rounded mt-5"
+            >
+              View
+            </a>
           </div>
 
           <div className="tech mt-5">
@@ -56,7 +61,12 @@ export const Projects = () => (
             (Discord Moderation Bot) and currently working with them on some
             side-projects
             <br />
-            Live at <a href="https://okeyko.fun">okeyko.fun</a>
+            <a
+              href="https://okeyko.fun"
+              className="button is-primary is-rounded mt-5"
+            >
+              View
+            </a>
           </div>
 
           <div className="tech mt-5">
