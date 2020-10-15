@@ -24,7 +24,8 @@ export const PlaceholderCard = () => (
 export const Projects = () => (
   <div className="container">
     <ColumnWrapper>
-      <Column size="is-one-third">
+      {/* <Column size="is-one-third"> */}
+      <Column size="is-half">
         <Card
           title="Kitsune VPN - Website"
           isParallax={true}
@@ -43,7 +44,8 @@ export const Projects = () => (
         </Card>
       </Column>
 
-      <Column size="is-one-third">
+      {/* <Column size="is-one-third"> */}
+      <Column size="is-half">
         <Card
           title="Okeyko"
           isParallax={true}
@@ -65,9 +67,9 @@ export const Projects = () => (
         </Card>
       </Column>
 
-      <Column size="is-one-third">
+      {/* <Column size="is-one-third">
         <PlaceholderCard />
-      </Column>
+      </Column> */}
     </ColumnWrapper>
   </div>
 );

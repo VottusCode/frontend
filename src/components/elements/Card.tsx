@@ -39,7 +39,7 @@ export const Card: React.FC<CardProps> = ({
 }) => (
   <div
     className={`card ${isParallax ? "is-parallax" : ""}`}
-    style={{ height: "500px" }}
+    style={{ height: "100%" }}
   >
     {image && <CardImage {...image} />}
     <div className="card-content has-text-centered ">
