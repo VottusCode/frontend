@@ -1,7 +1,6 @@
+import React from "react";
 import { useQuery } from "@apollo/client";
-import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../../../context/UserContext";
 import { meQuery } from "../../../gql/queries";
 
 export const Header = () => {
@@ -35,9 +34,9 @@ export const Header = () => {
               </li>
               {data && data.me ? (
                 <li>
-                  <a onClick={logout} href="#">
+                  <button className="button is-primary" onClick={logout}>
                     Logout
-                  </a>
+                  </button>
                 </li>
               ) : (
                 <>

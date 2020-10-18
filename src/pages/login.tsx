@@ -1,4 +1,4 @@
-import { useLazyQuery, useMutation, useQuery } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { GraphQLError } from "graphql";
 import React, { FormEvent, useState } from "react";
 import { Lock } from "react-feather";
@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import Hero from "../components/elements/Hero";
 import { BlogWrapper } from "../components/styled/blog";
 import { loginMutation, LoginMutationData } from "../gql/mutations";
-import { meQuery } from "../gql/queries";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
 export const LoginPage: React.FC = () => {

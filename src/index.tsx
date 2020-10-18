@@ -3,16 +3,12 @@ import {
   ApolloProvider,
   createHttpLink,
   InMemoryCache,
-  useLazyQuery,
-  useQuery,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 import "./assets/scss/main.scss";
-import UserContext from "./context/UserContext";
-import { meQuery } from "./gql/queries";
 import Router from "./router";
 
 const httpLink = createHttpLink({
@@ -41,15 +37,6 @@ const client = new ApolloClient({
 });
 
 export const ReactRoot: React.FC = () => {
-  const [userContext, setUserContext] = useState({
-    authenticated: false,
-    user: null,
-  });
-
-  /**
-   * TODO: fetch user information
-   */
-
   // const [executeMe, { data, error }] = useLazyQuery(meQuery);
 
   // const fetch = async () => {
@@ -69,9 +56,7 @@ export const ReactRoot: React.FC = () => {
   return (
     <React.StrictMode>
       <ApolloProvider client={client}>
-        <UserContext.Provider value={userContext}>
-          <Router />
-        </UserContext.Provider>
+        <Router />
       </ApolloProvider>
     </React.StrictMode>
   );
