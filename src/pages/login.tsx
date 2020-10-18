@@ -1,4 +1,4 @@
-import { useMutation } from "@apollo/client";
+import { useLazyQuery, useMutation, useQuery } from "@apollo/client";
 import { GraphQLError } from "graphql";
 import React, { FormEvent, useState } from "react";
 import { Lock } from "react-feather";
@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import Hero from "../components/elements/Hero";
 import { BlogWrapper } from "../components/styled/blog";
 import { loginMutation, LoginMutationData } from "../gql/mutations";
+import { meQuery } from "../gql/queries";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
 export const LoginPage: React.FC = () => {
@@ -17,7 +18,6 @@ export const LoginPage: React.FC = () => {
   const [errors, setErrors] = useState<ReadonlyArray<GraphQLError> | null>(
     null
   );
-
   const [executeLogin] = useMutation<LoginMutationData>(loginMutation, {
     errorPolicy: "all",
   });
@@ -42,7 +42,9 @@ export const LoginPage: React.FC = () => {
       console.log({ res });
 
       localStorage.setItem("vottus_token", res.data.login.token);
+
       history.push("/blog");
+      history.go(0);
     } catch (e) {
       // unknown error
     }

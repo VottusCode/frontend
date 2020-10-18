@@ -1,6 +1,8 @@
+import { useQuery } from "@apollo/client";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../../context/UserContext";
+import { meQuery } from "../../../gql/queries";
 
 export const Header = () => {
   const logout = () => {
@@ -8,9 +10,9 @@ export const Header = () => {
     window.history.go();
   };
 
-  const user = useContext(UserContext);
+  const { data } = useQuery(meQuery);
 
-  console.log(user);
+  console.log("[Vottus GQL] This is me", data);
 
   return (
     <>
@@ -31,7 +33,7 @@ export const Header = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
-              {localStorage.getItem("vottus_token") ? (
+              {data && data.me ? (
                 <li>
                   <a onClick={logout} href="#">
                     Logout

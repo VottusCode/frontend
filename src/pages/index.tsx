@@ -42,7 +42,6 @@ export const IndexPage: React.FC = () => {
         style={{
           backgroundImage: `url(${background})`,
           backgroundRepeat: "repeat",
-          backgroundSize: "contain",
         }}
       />
 
