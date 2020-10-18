@@ -30,16 +30,17 @@ export const Projects = () => (
           title="Kitsune VPN - Website"
           isParallax={true}
           image={{ src: kitsuneWeb, alt: "KitsuneVPN" }}
+          link="https://kitsune.su"
         >
           <div className="content">
             Website Frontend for KitsuneVPN.
-            <br />
+            {/* <br />
             <a
               href="https://kitsune.su"
               className="button is-primary is-rounded mt-5"
             >
               View
-            </a>
+            </a> */}
           </div>
 
           <div className="tech mt-5">
@@ -54,19 +55,20 @@ export const Projects = () => (
         <Card
           title="Okeyko"
           isParallax={true}
+          link="https://okeyko.fun"
           image={{ src: okeykoWeb, alt: "Okeyko" }}
         >
           <div className="content">
             Website and Backend for Okeyko's Website. Dashboard for OKBOT
             (Discord Moderation Bot) and currently working with them on some
             side-projects
-            <br />
+            {/* <br />
             <a
               href="https://okeyko.fun"
               className="button is-primary is-rounded mt-5"
             >
               View
-            </a>
+            </a> */}
           </div>
 
           <div className="tech mt-5">

@@ -1,4 +1,15 @@
+/*****************************/
+/*                           */
+/*  VottusWeb Frontend       */
+/*  2020 (c) Filip Vottus    */
+/*                           */
+/*****************************/
+
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap");
+
+/*****************************/
+/*         Variables         */
+/*****************************/
 
 $body-family: "Jost", sans-serif;
 $body-background-color: #111;
@@ -8,14 +19,25 @@ $primary: rgb(120, 0, 206);
 $link: $primary;
 $link-hover: #f0f0f0;
 
-$card-background-color: #111;
+$card-background-color: #222;
 $card-color: #f0f0f0;
+
+$label-color: #f0f0f0;
+$label-weight: 300;
+$input-color: #cacaca;
+$input-background-color: #111;
+$input-border-color: #111;
+$input-hover-border-color: #111;
+$input-disabled-background-color: #363636;
+$input-disabled-border-color: #363636;
+$input-disabled-color: #fff;
 
 @import "bulma/bulma";
 
-/**
- * Disable Scrollbar
- */
+/*****************************/
+/*         Scrollbar         */
+/*****************************/
+
 @-moz-document url-prefix() {
   html {
     scrollbar-width: none;
@@ -27,6 +49,10 @@ body {
   -ms-overflow-style: none;
   overflow-y: scroll;
 }
+
+/*****************************/
+/*      Landing Title        */
+/*****************************/
 
 .landing-title {
   color: #fff !important;
@@ -48,6 +74,10 @@ body {
     color: #fff;
   }
 }
+
+/*****************************/
+/*          Console          */
+/*****************************/
 
 .console {
   height: fit-content;
@@ -129,14 +159,9 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/*****************************/
+/*          Navbar           */
+/*****************************/
 
 .vtts-header,
 .is-fade-item {
@@ -238,6 +263,45 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+/*****************************/
+/*        Animations         */
+/*****************************/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*****************************/
+/*       Default Layout      */
+/*****************************/
+
+.default-content-wrapper {
+  min-height: 100vh;
+}
+
+.has-bg {
+  background: url(../../assets/svg/bg.svg);
+}
+
+a.card-link {
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+
+  & > .card {
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+
+    &:hover {
+      transform: scale(0.9);
     }
   }
 }

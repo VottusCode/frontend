@@ -8,11 +8,21 @@ import {
 import BlogPage from "../pages/blog";
 
 import IndexPage from "../pages/index";
+import LoginPage from "../pages/login";
+import { RegisterPage } from "../pages/register";
 
 const routes: RouteProps[] = [
   {
     path: "/blog",
     component: BlogPage,
+  },
+  {
+    path: "/login",
+    component: LoginPage,
+  },
+  {
+    path: "/register",
+    component: RegisterPage,
   },
   {
     path: "/",

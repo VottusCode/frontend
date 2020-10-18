@@ -6,6 +6,7 @@ export type CardProps = {
   isParallax: boolean;
   image?: CardImageProps;
   title?: string;
+  link?: string;
 };
 
 export type CardImageProps = {
@@ -36,18 +37,37 @@ export const Card: React.FC<CardProps> = ({
   image,
   title,
   children,
-}) => (
-  <div
-    className={`card ${isParallax ? "is-parallax" : ""}`}
-    style={{ height: "100%" }}
-  >
-    {image && <CardImage {...image} />}
-    <div className="card-content has-text-centered ">
-      {title && <CardTitle text={title} />}
+  link,
+}) => {
+  const CardBody: React.FC = () => (
+    <>
+      <div
+        className={`card ${isParallax ? "is-parallax" : ""}`}
+        style={{ height: "100%" }}
+      >
+        {image && <CardImage {...image} />}
+        <div
+          className={`card-content ${isParallax ? "has-text-centered" : ""}`}
+        >
+          {title && <CardTitle text={title} />}
 
-      {children && children}
-    </div>
-  </div>
-);
+          {children && children}
+        </div>
+      </div>
+    </>
+  );
+
+  return (
+    <>
+      {typeof link === "string" ? (
+        <a href={link} className="card-link">
+          <CardBody />
+        </a>
+      ) : (
+        <CardBody />
+      )}
+    </>
+  );
+};
 
 export default Card;

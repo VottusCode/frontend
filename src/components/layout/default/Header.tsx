@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const logout = () => {
+    localStorage.removeItem("vottus_token");
+    window.history.go();
+  };
+
   return (
     <>
       <div className="vtts-header">
@@ -21,6 +26,20 @@ export const Header = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
+              {localStorage.getItem("vottus_token") ? (
+                <li>
+                  <a onClick={logout}>Logout</a>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li>
+                    <Link to="/register">Register</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
