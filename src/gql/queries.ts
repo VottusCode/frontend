@@ -10,3 +10,18 @@ export const blogPostsQuery = (page: number) => gql`
     }
   }
 `;
+
+export const meQuery = gql`
+  query {
+    me {
+      id
+      username
+      email
+      role {
+        name
+        preset
+      }
+      banned
+    }
+  }
+`;

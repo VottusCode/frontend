@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../../context/UserContext";
 
 export const Header = () => {
   const logout = () => {
     localStorage.removeItem("vottus_token");
     window.history.go();
   };
+
+  const user = useContext(UserContext);
+
+  console.log(user);
 
   return (
     <>
@@ -28,7 +33,9 @@ export const Header = () => {
               </li>
               {localStorage.getItem("vottus_token") ? (
                 <li>
-                  <a onClick={logout}>Logout</a>
+                  <a onClick={logout} href="#">
+                    Logout
+                  </a>
                 </li>
               ) : (
                 <>

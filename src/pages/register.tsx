@@ -5,11 +5,7 @@ import { Lock } from "react-feather";
 import { useHistory } from "react-router-dom";
 import Hero from "../components/elements/Hero";
 import { BlogWrapper } from "../components/styled/blog";
-import {
-  loginMutation,
-  LoginMutationData,
-  registerMutation,
-} from "../gql/mutations";
+import { registerMutation } from "../gql/mutations";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 
 export const RegisterPage: React.FC = () => {
