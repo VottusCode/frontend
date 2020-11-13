@@ -46,7 +46,6 @@ html {
 }
 
 .avatar {
-  max-height: 200px;
   cursor: pointer;
 
   a {
@@ -64,6 +63,8 @@ html {
   }
 
   img {
+    max-height: 200px;
+
     @media (min-width: 640px) {
       max-height: 200px;
     }
