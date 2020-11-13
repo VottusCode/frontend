@@ -21,70 +21,85 @@ export const PlaceholderCard = () => (
   </Card>
 );
 
-export const Projects = () => (
-  <div className="container">
-    <ColumnWrapper>
-      {/* <Column size="is-one-third"> */}
-      <Column size="is-half">
-        <Card
-          title="Kitsune VPN - Website"
-          isParallax={true}
-          image={{ src: kitsuneWeb, alt: "KitsuneVPN" }}
-          link="https://kitsune.su"
-        >
-          <div className="content">
-            Website Frontend for KitsuneVPN.
-            {/* <br />
+export const Projects = () => {
+  const old = (
+    <div className="container">
+      <ColumnWrapper>
+        {/* <Column size="is-one-third"> */}
+        <Column size="is-half">
+          <Card
+            title="Kitsune VPN - Website"
+            isParallax={true}
+            image={{ src: kitsuneWeb, alt: "KitsuneVPN" }}
+            link="https://kitsune.su"
+          >
+            <div className="content">
+              Website Frontend for KitsuneVPN.
+              {/* <br />
             <a
               href="https://kitsune.su"
               className="button is-primary is-rounded mt-5"
             >
               View
             </a> */}
-          </div>
+            </div>
 
-          <div className="tech mt-5">
-            <span className="tag is-success mr-2">Vue.js CSR</span>
-            <span className="tag is-link">TypeScript</span>
-          </div>
-        </Card>
-      </Column>
+            <div className="tech mt-5">
+              <span className="tag is-success mr-2">Vue.js CSR</span>
+              <span className="tag is-link">TypeScript</span>
+            </div>
+          </Card>
+        </Column>
 
-      {/* <Column size="is-one-third"> */}
-      <Column size="is-half">
-        <Card
-          title="Okeyko"
-          isParallax={true}
-          link="https://okeyko.fun"
-          image={{ src: okeykoWeb, alt: "Okeyko" }}
-        >
-          <div className="content">
-            Website and Backend for Okeyko's Website. Dashboard for OKBOT
-            (Discord Moderation Bot) and currently working with them on some
-            side-projects
-            {/* <br />
+        {/* <Column size="is-one-third"> */}
+        <Column size="is-half">
+          <Card
+            title="Okeyko"
+            isParallax={true}
+            link="https://okeyko.fun"
+            image={{ src: okeykoWeb, alt: "Okeyko" }}
+          >
+            <div className="content">
+              Website and Backend for Okeyko's Website. Dashboard for OKBOT
+              (Discord Moderation Bot) and currently working with them on some
+              side-projects
+              {/* <br />
             <a
               href="https://okeyko.fun"
               className="button is-primary is-rounded mt-5"
             >
               View
             </a> */}
-          </div>
+            </div>
 
-          <div className="tech mt-5">
-            <span className="tag is-info mr-2">React CSR</span>
-            <span className="tag is-success mr-2">Vue.js CSR</span>
-            <span className="tag is-link">TypeScript</span>
-          </div>
-        </Card>
-      </Column>
+            <div className="tech mt-5">
+              <span className="tag is-info mr-2">React CSR</span>
+              <span className="tag is-success mr-2">Vue.js CSR</span>
+              <span className="tag is-link">TypeScript</span>
+            </div>
+          </Card>
+        </Column>
 
-      {/* <Column size="is-one-third">
+        {/* <Column size="is-one-third">
         <PlaceholderCard />
       </Column> */}
-    </ColumnWrapper>
-  </div>
-);
+      </ColumnWrapper>
+    </div>
+  );
+
+  return (
+    <div className="container">
+      <div className="mt-4" style={{ width: "100%" }}>
+        <div className="notification is-danger has-text-centered">
+          <h3 className="is-size-4" style={{ marginBottom: "0" }}>
+            Projects are currently unavailable.{" "}
+          </h3>
+          Reason: Backend unreachable.
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // export const ProjectsOld = () => {
 //   return (

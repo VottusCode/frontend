@@ -32,7 +32,7 @@ $input-disabled-background-color: #363636;
 $input-disabled-border-color: #363636;
 $input-disabled-color: #fff;
 
-@import "bulma/bulma";
+// @import "bulma/bulma";
 
 /*****************************/
 /*         Scrollbar         */
@@ -297,11 +297,13 @@ a.card-link {
   transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 
   & > .card {
+    margin-top: 20px;
     cursor: pointer;
     transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    transform: scale(0.9);
 
     &:hover {
-      transform: scale(0.9);
+      transform: scale(1);
     }
   }
 }

@@ -27,6 +27,7 @@
     "react-spinners": "^0.9.0",
     "react-spring": "^8.0.27",
     "styled-components": "^5.2.0",
+    "tailwindcss": "^1.9.6",
     "typescript": "~3.7.2"
   },
   "scripts": {

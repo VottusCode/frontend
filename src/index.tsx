@@ -8,7 +8,8 @@ import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./assets/scss/main.scss";
+import "./assets/scss/tailwind.css";
+// import "./assets/scss/main.scss";
 import Router from "./router";
 
 const httpLink = createHttpLink({
