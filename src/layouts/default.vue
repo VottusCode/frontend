@@ -16,7 +16,9 @@ export default Vue.extend({
   },
   beforeRouteUpdate(to, from, next) {
     this.transition =
-      to.path.split('/').length < from.path.split('/').length
+      to.path === '/'
+        ? 'slide-right'
+        : to.path.split('/').length < from.path.split('/').length
         ? 'slide-right'
         : 'slide-left';
     next();
