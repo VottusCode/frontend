@@ -21,10 +21,10 @@
           </div>
 
           <div class="mt-8">
-            I use and have most experience
-            <a href="https://nodejs.org" target="_blank">Node.js</a> with
-            <a href="https://fastify.io" target="_blank">Fastify</a> and
-            <a href="https://vuejs.org" target="_blank">Vue.js</a> (+ Nuxt.js).
+            I use and have the most experience with
+            <a href="https://nodejs.org" target="_blank">Node.js</a> (+ Fastify)
+            and <a href="https://vuejs.org" target="_blank">Vue.js</a> (+
+            Nuxt.js).
             <br />
             I also like using <strong>TypeScript</strong> with my projects.
           </div>
@@ -56,8 +56,8 @@
       <div
         class="col-end-4 col-span-1 justify-end items-center w-full h-full hidden lg:flex"
       >
-        <div class="image">
-          <img :src="avatar.url" alt="Vottus" class="rounded-xl avatar" />
+        <div class="avatar">
+          <img :src="avatar.url" alt="Vottus" class="rounded-xl" />
           <a :href="avatar.author" target="_blank" class="dash-none text-sm">{{
             avatar.author
           }}</a>

@@ -57,25 +57,28 @@ html {
     @apply text-purple-600;
     @apply text-xl;
   }
+
   &:hover a {
     margin-top: 0;
     opacity: 1;
   }
 
-  @media (min-width: 640px) {
-    max-height: 200px;
-  }
+  img {
+    @media (min-width: 640px) {
+      max-height: 200px;
+    }
 
-  @media (min-width: 768px) {
-    max-height: 250px;
-  }
+    @media (min-width: 768px) {
+      max-height: 250px;
+    }
 
-  @media (min-width: 1024px) {
-    max-height: 400px;
-  }
+    @media (min-width: 1024px) {
+      max-height: 400px;
+    }
 
-  @media (min-width: 1280px) {
-    max-height: 600px;
+    @media (min-width: 1280px) {
+      max-height: 600px;
+    }
   }
 }
 
