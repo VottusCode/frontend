@@ -18,9 +18,12 @@ export default Vue.extend({
     };
   },
   beforeRouteUpdate(to, from, next) {
-    const toDepth = to.path.split('/').length;
-    const fromDepth = from.path.split('/').length;
-    this.transition = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+    this.transition =
+      to.path === '/'
+        ? 'slide-right'
+        : to.path.split('/').length < from.path.split('/').length
+        ? 'slide-right'
+        : 'slide-left';
     next();
   },
 });

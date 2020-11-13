@@ -89,3 +89,34 @@ html {
   -webkit-transform: translate(-30px, 0);
   transform: translate(-30px, 0);
 }
+
+a {
+  @apply text-gray-800;
+  @apply font-normal;
+}
+a:not(.dash-none) {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    z-index: 0;
+    top: 65%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 0.3s cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(128, 90, 213, 0.5);
+  }
+
+  &:hover:after {
+    top: 0%;
+  }
+}
+
+.links > li {
+  &:before {
+    content: '– ';
+    @apply text-gray-500;
+  }
+}
