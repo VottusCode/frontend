@@ -1,42 +1,6 @@
-/*****************************/
-/*                           */
-/*  VottusWeb Frontend       */
-/*  2020 (c) Filip Vottus    */
-/*                           */
-/*****************************/
-
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap");
-
-/*****************************/
-/*         Variables         */
-/*****************************/
-
-$body-family: "Jost", sans-serif;
-$body-background-color: #111;
-$body-color: #f0f0f0;
-
-$primary: rgb(120, 0, 206);
-$link: $primary;
-$link-hover: #f0f0f0;
-
-$card-background-color: #222;
-$card-color: #f0f0f0;
-
-$label-color: #f0f0f0;
-$label-weight: 300;
-$input-color: #cacaca;
-$input-background-color: #111;
-$input-border-color: #111;
-$input-hover-border-color: #111;
-$input-disabled-background-color: #363636;
-$input-disabled-border-color: #363636;
-$input-disabled-color: #fff;
-
-// @import "bulma/bulma";
-
-/*****************************/
-/*         Scrollbar         */
-/*****************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @-moz-document url-prefix() {
   html {
@@ -50,260 +14,54 @@ body {
   overflow-y: scroll;
 }
 
-/*****************************/
-/*      Landing Title        */
-/*****************************/
-
-.landing-title {
-  color: #fff !important;
-  h1 {
-    font-size: 10rem;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 0;
-
-    &.half {
-      font-size: 6rem !important;
-    }
-  }
-
-  h2 {
-    margin-top: 0 !important;
-    font-weight: 300;
-    font-size: 3rem;
-    color: #fff;
-  }
-}
-
-/*****************************/
-/*          Console          */
-/*****************************/
-
-.console {
-  height: fit-content;
-  width: 600px;
-  border-radius: 0.42rem;
-  background: #222;
-
-  & > .bars-wrapper {
-    height: 2.4rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-top-left-radius: 0.42rem;
-    border-top-right-radius: 0.42rem;
-    text-align: right;
-    display: flex;
-    & > .bars {
-      margin-left: auto;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-right: 10px;
-
-      span {
-        background: lightblue;
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 6px;
-
-        &:nth-child(1) {
-          background: lightgreen;
-        }
-
-        &:nth-child(2) {
-          background: orange;
-        }
-
-        &:nth-child(3) {
-          background: lightcoral;
-        }
-      }
-    }
-  }
-  .console-content {
-    padding-top: 1rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 1rem;
-
-    color: #4af626;
-
-    span {
-      color: white;
-      font-size: 0.875em;
-      margin-left: -4px;
-      padding: 0.25em 0.8em 0.3em;
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    div {
-      font-size: 0.9rem;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 6px;
-      span {
-        display: inline-block;
-        margin-left: 0;
-        width: 90px !important;
-      }
-
-      a {
-        margin-left: 8px;
-        color: #fff;
-        border-bottom: 1px solid gray;
-      }
-    }
-  }
-}
-
-/*****************************/
-/*          Navbar           */
-/*****************************/
-
-.vtts-header,
-.is-fade-item {
-  animation: fadeIn 0.4s cubic-bezier(0.87, 0, 0.13, 1) forwards;
-}
-
-.vtts-header {
-  // position: absolute !important;
-  display: flex;
+::-webkit-scrollbar {
   opacity: 0;
-  padding: 20px;
-  transition: opacity 0.6s cubic-bezier(0.76, 0, 0.24, 1),
-    background 0.2s cubic-bezier(0.76, 0, 0.24, 1);
-  flex-flow: column;
-  width: 100vw;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.08);
-  color: #111 !important;
+  width: 0;
+  display: none;
+}
 
-  &.fixed {
-    position: fixed !important;
-  }
+body {
+  font-weight: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @apply bg-gray-200;
+}
 
-  @media (min-width: 768px) {
-    & {
-      padding: 20px 32px 20px 32px;
-    }
-  }
+.title {
+  position: relative;
+  @apply text-gray-700;
 
-  .header-left {
-    text-align: left;
+  &:after {
+    content: attr(data-text);
     position: absolute;
-
-    & > p,
-    & > a {
-      color: #fff;
-      font-weight: 500;
-      font-size: 1.4rem;
-    }
-  }
-
-  .header-right {
-    text-align: right;
-
-    ul {
-      list-style-type: none;
-
-      li {
-        position: relative;
-        color: #cfcfcf;
-        font-weight: 400;
-        font-size: 1.3rem;
-        margin-bottom: 5px;
-        display: flow-root;
-        margin-right: 0;
-        transition: color 0.6s cubic-bezier(0.76, 0, 0.24, 1);
-
-        @media (min-width: 768px) {
-          &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 2.2px;
-            background: $primary;
-            bottom: 2px;
-            width: 0;
-            transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-          }
-        }
-
-        @media (min-width: 768px) {
-          & {
-            margin-right: 20px !important;
-            display: inline-block !important;
-
-            &:last-child {
-              margin-right: 0 !important;
-              margin-bottom: 0 !important;
-            }
-          }
-        }
-
-        a {
-          color: #cfcfcf;
-          transition: color 0.6s cubic-bezier(0.76, 0, 0.24, 1);
-          &:hover {
-            color: #fff;
-          }
-        }
-
-        &:hover {
-          color: #fff;
-          @media (min-width: 768px) {
-            &:before {
-              width: 100%;
-              transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-            }
-          }
-        }
-      }
-    }
+    font-size: 8rem;
+    opacity: 0.1;
+    left: 0;
+    top: -0.8rem;
+    font-weight: 500;
   }
 }
 
-/*****************************/
-/*        Animations         */
-/*****************************/
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.75s ease;
 }
-
-/*****************************/
-/*       Default Layout      */
-/*****************************/
-
-.default-content-wrapper {
-  min-height: 100vh;
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
-
-.has-bg {
-  background: url(../../assets/svg/bg.svg);
+.child-view {
+  position: absolute;
+  transition: all 0.75s cubic-bezier(0.55, 0, 0.1, 1);
 }
-
-a.card-link {
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-
-  & > .card {
-    margin-top: 20px;
-    cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-    transform: scale(0.9);
-
-    &:hover {
-      transform: scale(1);
-    }
-  }
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
 }
