@@ -16,16 +16,12 @@ const routes: Array<RouteConfig> = [
         path: '/blog',
         component: () => import(/* webpackChunkName: "blog" */ '../pages/blog.vue'),
       },
+      {
+        path: '/blog/hello',
+        component: () => import(/* webpackChunkName: "blog-view" */ '../pages/blog-view.vue'),
+      },
     ],
   },
-  // {
-  // path: '/about',
-  // name: 'About',
-  // route level code-splitting
-  // this generates a separate chunk (about.[hash].js) for this route
-  // which is lazy-loaded when the route is visited.
-  // component: () => import(/* webpackChunkName: "about" */ '../pag/About.vue'),
-  // },
 ];
 
 const router = new VueRouter({

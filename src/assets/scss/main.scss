@@ -67,7 +67,7 @@ html {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.75s ease;
+  transition: opacity 0.4s ease;
 }
 .fade-enter,
 .fade-leave-active {
@@ -75,7 +75,7 @@ html {
 }
 .child-view {
   position: absolute;
-  transition: all 0.75s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .slide-left-enter,
 .slide-right-leave-active {

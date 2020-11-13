@@ -2,6 +2,9 @@
   <router-link v-if="to" :href="href" :to="to" class="w-full dash-none">
     <div
       class="bg-gray-200 text-white px-4 py-3 rounded-md w-full transition duration-150 ease-in-out transform hover:scale-98 mb-4"
+      :class="{
+        'transition duration-150 ease-in-out transform hover:scale-98 mb-4': hoverable,
+      }"
     >
       <h2 class="text-2xl text-gray-700 mt-1" style="line-height: 1">
         {{ title }}
@@ -13,9 +16,12 @@
     </div>
   </router-link>
 
-  <a :href="href ? href : '#'" v-else>
+  <a :href="href ? href : null" v-else class="w-full dash-none">
     <div
-      class="bg-gray-200 text-white px-4 py-3 rounded-md w-full transition duration-150 ease-in-out transform hover:scale-98 mb-4"
+      class="bg-gray-200 text-white px-4 py-3 rounded-md w-full"
+      :class="{
+        'transition duration-150 ease-in-out transform hover:scale-98 mb-4': hoverable,
+      }"
     >
       <h2 class="text-2xl text-gray-700">{{ title }}</h2>
       <div class="mt-4 text-gray-600 w-full">
@@ -34,6 +40,7 @@ export default Vue.extend({
     title: String,
     to: String,
     detail: String,
+    hoverable: Boolean,
   },
 });
 </script>
