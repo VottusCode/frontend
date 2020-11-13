@@ -47,6 +47,20 @@ html {
 
 .avatar {
   max-height: 200px;
+  cursor: pointer;
+
+  a {
+    display: block;
+    opacity: 0;
+    margin-top: -30px;
+    transition: margin-top 0.3s cubic-bezier(0, 0.8, 0.13, 1);
+    @apply text-purple-600;
+    @apply text-xl;
+  }
+  &:hover a {
+    margin-top: 0;
+    opacity: 1;
+  }
 
   @media (min-width: 640px) {
     max-height: 200px;
