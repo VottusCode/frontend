@@ -97,7 +97,7 @@
       </text-wrapper>
     </div>
 
-    <div>
+    <div class="hidden lg:block">
       <div class="avatar">
         <img :src="avatar.url" alt="Vottus" class="rounded-xl" />
         <a :href="avatar.author" target="_blank" class="dash-none text-sm">{{ avatar.author }}</a>
