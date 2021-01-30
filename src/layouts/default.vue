@@ -1,9 +1,7 @@
 <template>
-  <div class="w-screen h-screen bg-gray-100 text-white">
-    <transition :name="transition">
-      <router-view class="child-view" />
-    </transition>
-  </div>
+  <transition :name="transition">
+    <router-view class="child-view" />
+  </transition>
 </template>
 
 <script lang="ts">

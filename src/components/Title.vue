@@ -1,9 +1,5 @@
 <template>
-  <h1
-    class="title md:text-6xl mb-16"
-    :data-text="shadow"
-    style="line-height: 1"
-  >
+  <h1 class="title md:text-6xl text-black" :data-text="shadow" style="line-height: 1">
     <slot />
   </h1>
 </template>
