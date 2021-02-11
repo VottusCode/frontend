@@ -18,7 +18,7 @@ export const Title = () => (
 
     <div className="mt-6">
       <button className="button is-primary is-rounded is-large">
-        Let's go
+        Let's go, for the last time!
       </button>
     </div>
   </div>
