@@ -2,7 +2,7 @@
   <div
     class="text-black min-w-screen min-h-screen w-full h-full flex justify-between items-center mx-auto max-w-6xl"
   >
-    <div>
+    <div class="max-w-xl">
       <Title shadow="Vottus">Vottus</Title>
       <subtitle>
         Fullstack
