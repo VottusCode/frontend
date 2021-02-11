@@ -1,29 +1,55 @@
-# vtts-web
+# Vottus Website Frontend
 
-## Project setup
+This is my website, made using Vue.js, TailwindCSS and TypeScript (overkill, I know :D).
 
+## Setup
+
+### Requirements
+
+- Node.js 10.x (tested on 12.x and 14.x)
+
+### Installing dependencies
+
+Installing dependencies via Yarn:
+
+```bash
+yarn
 ```
-yarn install
+
+or via NPM:
+
+```bash
+npm i
 ```
 
-### Compiles and hot-reloads for development
+### Development
 
-```
+Starting the dev server:
+
+```bash
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Production
 
-```
+Building the assets for production:
+
+```bash
 yarn build
 ```
 
-### Lints and fixes files
+## Going back
 
+After some thinking, I've decided to go for a very easy and simple design and abandon my, while interesting, for some confusing style (the dark design with the terminal and parallax, using React). If you want to look back to that version, checkout to the commit 4640a8da657732cd4510a2380e8e6f893a7310c7:
+
+```bash
+git checkout 4640a8da657732cd4510a2380e8e6f893a7310c7
 ```
-yarn lint
-```
 
-### Customize configuration
+## License
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This code is licensed under GNU General Public License v2.0, see [LICENSE](https://github.com/VottusCode/frontend/blob/master/LICENSE).
+
+<hr/>
+
+&copy; 2016-2021 Filip Vottus &ndash; All Rights Reserved

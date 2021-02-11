@@ -1,7 +1,8 @@
 {
-  "name": "vtts-web",
-  "version": "0.1.0",
+  "name": "@vottuscode/frontend",
+  "version": "1.0.0",
   "private": true,
+  "license": "GNU General Public License v2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
