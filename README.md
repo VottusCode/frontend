@@ -40,10 +40,10 @@ yarn build
 
 ## Going back
 
-After some thinking, I've decided to go for a very easy and simple design and abandon my, while interesting, for some confusing style (the dark design with the terminal and parallax, using React). If you want to look back to that version, checkout to the commit 4640a8da657732cd4510a2380e8e6f893a7310c7:
+After some thinking, I've decided to go for a very easy and simple design and abandon my, while interesting, for some confusing style (the dark design with the terminal and parallax, using React). If you want to look back to that version, checkout to the `react` branch:
 
 ```bash
-git checkout 4640a8da657732cd4510a2380e8e6f893a7310c7
+git checkout react
 ```
 
 ## License
