@@ -12,7 +12,7 @@
         Hello, I'm <strong>Mia</strong>, fullstack web developer. I
         am proficient in <strong>JavaScript (+ TypeScript)</strong>,
         <strong>PHP</strong> and <strong>Java</strong>, currently learning Rust.
-        I occasionally use <strong>Kotlin</strong> and <strong>Kotlin</strong>.
+        I occasionally use <strong>Java</strong> and <strong>Kotlin</strong>.
 
         <div class="mt-8">
           <strong>Links & Social Media</strong>
