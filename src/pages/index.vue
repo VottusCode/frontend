@@ -9,10 +9,7 @@
         <span class="text-purple-600 font-medium"> Website Developer </span>
       </subtitle>
       <text-wrapper>
-        Hello, I'm <strong>Mia</strong>, fullstack web developer. I
-        am proficient in <strong>JavaScript (+ TypeScript)</strong>,
-        <strong>PHP</strong> and <strong>Java</strong>, currently learning Rust.
-        I occasionally use <strong>Java</strong> and <strong>Kotlin</strong>.
+        I am Mia, a fullstack web developer. I am proficient in JavaScript And TypeScript, PHP and Java, currently learning Rust. I occasionally use Kotlin and Flutter.
 
         <div class="mt-8">
           <strong>Links & Social Media</strong>
